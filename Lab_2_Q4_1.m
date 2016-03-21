@@ -73,8 +73,8 @@ ya = [];
 xb = [];
 yb = [];
 
-for z=1:1:600
-    for y=1:1:450
+for z=1:2:600
+    for y=1:2:450
         for j = 1:maxj
             gtest = gw(j,:)*[z,y]' - gw0(j);
             if ((gtest < 0) && (nbAj(j) == 0))
@@ -92,7 +92,7 @@ load('lab2_3.mat','a');
 load('lab2_3.mat','b');
 
 hold on;
-scatter(xa,ya);
+scatter(xa,ya)
 scatter(xb,yb);
 scatter(a(:,1),a(:,2));
 scatter(b(:,1),b(:,2));
